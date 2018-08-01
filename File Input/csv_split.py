@@ -25,7 +25,7 @@ def arguments():
 	parser = argparse.ArgumentParser(description='Test..')
 	parser.add_argument("-i", "--input-file", required=True, help="input file name")
 	parser.add_argument("-o", "--output-file", required=True, help="output file name")
-	parser.add_argument("-r", "--row-limit", required=True, help="row limit to split", type=int)
+	parser.add_argument("-r", "--row-limit" required=True, help="row limit to split", type=int)
 	args = parser.parse_args()
 
 	is_valid_file(parser, args.input_file)

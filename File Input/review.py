@@ -18,3 +18,5 @@ for current_folder, subfolders, files_names in os.walk(my_path):
 		file_tuple = os.path.splitext(file_path) # split into (path, extension)
 		if file_tuple[1].lower() == ".png": # check if extension is PNG
 			os.rename(file_path, file_tuple[0] + ".jpg")
+
+

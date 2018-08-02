@@ -1,5 +1,13 @@
 from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.units import inch
 
-c = canvas.Canvas("hello.pdf")
-c.drawString(100, 100, "Hello World")
+xmargin = 3.2 * inch
+ymargin = 6 * inch
+
+c = canvas.Canvas("hello_again.pdf", pagesize=letter)
+
+c.setLineWidth(1)
+c.drawstring(xmargin, ymargin, "Hello World from ReportLab!")
+
 c.save()
